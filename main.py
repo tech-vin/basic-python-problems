@@ -105,4 +105,17 @@ testcases = ['vijay', 'qwerty', 'alpha']
 print([count_vowels(i) for i in testcases])
 print([countVowels(i) for i in testcases])
 
+'''
+Remove Duplicates (Preserve Order)
+Create unique_list(lst: List[Any]) -> List[Any] that returns a new list with duplicates removed but original order kept.
+'''
+def unique_list(lst: List[any]) -> List[any]:
+    newList = []
+    for i in lst:
+        if not i in newList:
+            newList.append(i)
+    return newList
+
+testcases = [[1, 1, 2, 4, 1, 2], [-1, 0, 9, -1]]
+print([unique_list(i) for i in testcases])
 
