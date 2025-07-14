@@ -65,3 +65,44 @@ def checkPositive(num):
 
 testcases = [[1, 1, 2, 4], [1, 0, 1, 1]]
 print([checkPositive(i) for i in testcases])
+
+'''
+Sum of Even Numbers
+Write sum_even(nums: List[int]) -> int that returns the sum of all even numbers in the list.
+'''
+from typing import List
+def sum_even(nums: List[int]) -> int:
+    total = 0
+    for n in nums:
+        print(n & 1)
+        if not (n & 1):
+            total += n
+    return total
+
+
+testcases = [[1, 2, 4, 2], [0, 12, 2, 34, 1, 2]]
+print([sum_even(i) for i in testcases])
+
+
+'''
+Count Vowels
+Implement count_vowels(s: str) -> int to count how many vowels (a, e, i, o, u) appear in the string (case-insensitive).
+'''
+def count_vowels(s: str) -> int:
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+    for ch in s:
+        if ch in vowels:
+            count += 1
+    return count
+
+VOWELS=set('aeiou')
+def countVowels(s: str) -> int:
+    s = s.lower()
+    return sum(ch in VOWELS for ch in s)
+
+testcases = ['vijay', 'qwerty', 'alpha']
+print([count_vowels(i) for i in testcases])
+print([countVowels(i) for i in testcases])
+
+
